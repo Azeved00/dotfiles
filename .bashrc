@@ -7,9 +7,14 @@
 
 #shapes and colors
 alias ls='ls --colo=auto'
-PS1="\e[1;33m\t \W >\e[0;37m"
+PS1="\e[1;33m\t \W 
+>\e[0;37m"
 
-export PATH=$HOME/.local/bin:$PATH
+#navigation
+alias ..='cd ../'
+alias .='ls ./'
+alias ...='cd ../../'
+
 
 #nvim shannannigans
 nvim_cd()
@@ -27,4 +32,8 @@ alias vim=nvim
 
 # git for my dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+#paths and trails
+export PATH=$HOME/.local/bin:$PATH
+ZDOTDIR="$HOME/.config/zsh"
 
