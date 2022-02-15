@@ -7,6 +7,7 @@
 :set mouse=a
 nnoremap <silent> <C-s> :w<CR>
 nnoremap <silent> <C-t> :terminal<CR>
+:tnoremap <Esc> <C-\><C-n>
 "nnoremap <silent> <C-w> :q<CR>
 " copy and paste
 set clipboard+=unnamedplus
@@ -58,7 +59,7 @@ nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 nnoremap <silent> <C-a> :NERDTreeFocus<CR>
 
 "let g:NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.git$', '\.idea$', '\.vscode$', '\.history$', '\.node_modules$']
+let g:NERDTreeIgnore=['^.git$', '^.idea$', '^.vscode$', '^.history$', '^node_modules$']
 "let g:NERDTreeDirArrowExpandable="^"
 "let g:NERDTreeDirArrowCollapsible=">"
 " Exit Vim if NERDTree is the only window remaining in the only tab.
@@ -94,13 +95,17 @@ endif
 "let g:airline_symbols.readonly = ''
 "let g:airline_symbols.linenr = ''
 let g:airline_theme='wombat'
+let g:airline#extensions#ale#enabled = 1
 
 "linting
 let g:ale_linters = {
     \ 'python': ['pylint'],
     \ 'vim': ['vint'],
-    \ 'cpp': ['clang'],
-    \ 'c': ['clang']
+    \ 'cpp': ['gcc'],
+    \ 'c': ['gcc'],
+	\ 'sql': ['sql-lint'],
+	\ 'javascript': ['eslint'],
+	\ 'typescript': ['eslint'],
 \}
 
 

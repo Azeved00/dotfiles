@@ -261,7 +261,7 @@ for_window [class="Spotify"] move to workspace $ws4
 # touching program launcher. Assign Programs to respective
 # workspaces.
 bindsym $mod+b workspace 1; exec Vivaldi
-bindsym $mod+t workspace 4; exec kitty
+bindsym $mod+t workspace 2; exec Alacritty 
 
 #Multi Monitor (Dual Monitor, extended monitor)
 #Replace HDMI2 with DVI-2, VGA-2, DP-2, DVI-2 etc. Get value by typing xrandr in the terminal.
